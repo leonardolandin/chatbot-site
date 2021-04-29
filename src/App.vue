@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <Chat />
   </div>
 </template>
 
 <script>
-import Chat from './components/Chat.vue'
 
 export default {
   name: 'App',
-  components: {
-    Chat
+    mounted() {
+      window.watsonAssistantChatOptions = {
+      integrationID: "be8292de-ed89-4a68-a232-1b97601115c5", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "4f423d71-0d8c-4d5b-be01-74361880bb98", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    }
+    setTimeout(function() {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    })
   }
 }
 </script>
@@ -26,6 +34,8 @@ export default {
 }
 
 body {
-  margin: 0
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 </style>
