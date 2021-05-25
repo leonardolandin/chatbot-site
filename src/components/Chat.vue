@@ -1,6 +1,6 @@
 <template>
   <div class="containerChat">
-    <div>
+    <!-- <div>
       <div class="containerName">
         <input type="text" placeholder="Nome de usuário">
       </div>
@@ -15,13 +15,13 @@
       <div class="containerSend">
         <button>Enviar</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: 'HelloWorld',
 }
 </script>
 
