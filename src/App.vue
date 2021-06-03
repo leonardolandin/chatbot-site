@@ -9,14 +9,14 @@ export default {
   name: 'App',
     mounted() {
       window.watsonAssistantChatOptions = {
-      integrationID: "be8292de-ed89-4a68-a232-1b97601115c5", // The ID of this integration.
-      region: "us-south", // The region your integration is hosted in.
-      serviceInstanceID: "4f423d71-0d8c-4d5b-be01-74361880bb98", // The ID of your service instance.
-      onLoad: function(instance) { instance.render(); }
-    }
+          integrationID: "ad4dd174-7dd6-49c3-9c1e-fdd022bbc4fd", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "2de0d687-5240-4d06-bbd3-d098db26a361", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
     setTimeout(function() {
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
       document.head.appendChild(t);
     })
   }
